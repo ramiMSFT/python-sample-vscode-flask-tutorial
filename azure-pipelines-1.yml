@@ -29,9 +29,10 @@ steps:
   displayName: 'setup.py'
 
 - task: TwineAuthenticate@1
-  displayName: Twine Authenticate
-  inputs:
-    artifactFeed: PythonDemo/PythonDemoFeed
+  inputs:
+    artifactFeed: PythonDemo/PythonDemoFeed
+  displayName: Twine Authenticate
 
-- script: | 
-     python -m twine upload -r PythonDemoFeed --config-file $(PYPIRC_PATH) dist/*.whl
+- script: |
+    python -m twine upload -r PythonDemoFeed --config-file $(PYPIRC_PATH) dist/*.whl
+  displayName: 'upload'
