@@ -22,10 +22,11 @@ steps:
 - script: |
     pip install wheel
     pip install twine
+    pip install build
   displayName: 'install'
 
 - script: |
-    python setup.py bdist_wheel
+    python -m build -w
   displayName: 'setup.py'
 
 - task: TwineAuthenticate@1
