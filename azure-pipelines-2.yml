@@ -36,8 +36,8 @@ steps:
   displayName: 'install'
   
 - script: |
-    python -m build -w
-  displayName: 'setup.py'
+    python -m build
+  displayName: 'build'
 
 - task: TwineAuthenticate@1
   inputs:
