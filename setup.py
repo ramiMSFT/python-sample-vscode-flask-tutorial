@@ -8,7 +8,6 @@ setuptools.setup(
     version="1.0",
     author="Dev",
     description="Demo package",
-    url="url",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
