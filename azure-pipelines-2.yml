@@ -34,6 +34,10 @@ steps:
     pip install twine
   displayName: 'install'
 
+- script: |
+    python setup.py bdist_wheel
+  displayName: 'bdist_wheel'
+
 - task: TwineAuthenticate@1
   inputs:
     artifactFeed: PythonDemo/PythonDemoFeed
