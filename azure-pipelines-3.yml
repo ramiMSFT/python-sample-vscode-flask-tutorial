@@ -13,7 +13,7 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     buildType: 'specific'
-    project: '68220757-1ab4-4168-bdb7-9f101fc7388a'
+    project: 'PsRepository'
     definition: '94'
     buildVersionToDownload: 'latest'
     artifactName: 'drop2'
