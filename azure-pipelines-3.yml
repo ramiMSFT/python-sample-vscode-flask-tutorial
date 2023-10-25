@@ -15,9 +15,7 @@ steps:
     buildType: 'specific'
     project: 'PsRepository'
     definition: 94
-    buildVersionToDownload: 'latestFromBranch'
-    runBranch: 'refs/heads/main'
-    allowPartiallySucceededBuilds: true
+    buildVersionToDownload: 'latest'
     artifactName: 'pipelineArtifactDrop'
     targetPath: '$(Pipeline.Workspace)'
 
