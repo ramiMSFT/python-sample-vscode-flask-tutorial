@@ -16,7 +16,7 @@ steps:
     project: 'PsRepository'
     definition: '94'
     buildVersionToDownload: 'latest'
-    artifactName: 'drop2'
+    artifactName: 'pipelineArtifactDrop'
     targetPath: '$(Pipeline.Workspace)'
 
 - task: PublishPipelineArtifact@1
