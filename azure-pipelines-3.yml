@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: DownloadPipelineArtifact@2
+  inputs:
+    buildType: 'specific'
+    project: '68220757-1ab4-4168-bdb7-9f101fc7388a'
+    definition: '94'
+    buildVersionToDownload: 'latest'
+    artifactName: 'drop2'
+    targetPath: '$(Pipeline.Workspace)'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'dropFromProj'
+    publishLocation: 'pipeline'
