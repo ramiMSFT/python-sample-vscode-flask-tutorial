@@ -18,3 +18,12 @@ steps:
 - script: |
     python -m build -w
   displayName: 'Python build'
+
+- task: TwineAuthenticate@1
+  inputs:
+    artifactFeed: PythonDemo/PythonDemoFeed>
+  displayName: 'Twine Authenticate'
+
+- script: |
+    python -m twine upload -r PythonDemoFeed --config-file $(PYPIRC_PATH) dist/*.whl
+  displayName: 'Upload to feed'
