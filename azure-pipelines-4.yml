@@ -11,5 +11,10 @@ pool:
 
 steps:
 - script: |
+    pip install build
+    pip install twine
+  displayName: 'Install Twine and Build'
+
+- script: |
     python -m build -w
   displayName: 'Python build'
