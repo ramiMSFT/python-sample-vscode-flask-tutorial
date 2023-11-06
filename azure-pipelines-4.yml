@@ -13,7 +13,8 @@ steps:
 - script: |
     pip install build
     pip install twine
-  displayName: 'Install Twine and Build'
+    pip install wheel
+  displayName: 'Install Twine & Build & Wheel'
 
 - script: |
     python -m build -w
