@@ -5,7 +5,7 @@ with open("README.md") as file:
 
 setuptools.setup(
     name="my-package",
-    version="3.0",
+    version="4.0",
     author="Dev",
     description="Demo package",
     packages=setuptools.find_packages(),
